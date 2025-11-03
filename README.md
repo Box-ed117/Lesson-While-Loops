@@ -70,7 +70,7 @@ Both the `for` and `while` loop versions can be represented with the same flowch
 ![flowchart](.media/01.png)
 
 
-### Infinite Loops (Very Common Mistake)
+### Infinite Loops (Common Mistake)
 
 If the loop condition never becomes false, the loop runs **forever**.
 
@@ -139,6 +139,35 @@ while (temp <= 30) {
 
 System.out.println("Warning: Too hot!");
 ```
+<br>
+
+## Choosing Between `for` and `while`
+
+Both `for` and `while` loops can represent the **same logic**, as shown in the flowchart above. So how do you know which one to use?
+
+Think of it as a **design decision**:
+
+| Use a `for` loop when… | Use a `while` loop when… |
+|------------------------|-------------------------|
+| You know **how many times** the loop should run. | You **do not know** how many repetitions will be needed. |
+| The loop is controlled by a **counter**. | The loop is controlled by a **condition that changes** as the program runs. |
+| You're iterating through a **sequence** or fixed range. | You're waiting for something to **happen** (input, state change, condition). |
+
+So while it is often possible to represent a loop as one or the other, a programmer can *communicate intent* by picking the most logical structure.
+
+Consider the following examples:
+
+| Scenario | Loop Choice | Reason |
+|---------|-------------|-----|
+| Print numbers 1–100 | `for` | The number of repetitions is known in advance. |
+| Ask the user to enter a grade until they enter one between 0–100 | `while` | We don’t know how many tries the user will need. |
+| Draw 30 circles evenly spaced across a line | `for` | The count is fixed (30 circles). |
+| Keep simulating temperature readings until the temperature goes above 30°C | `while` | The program depends on a condition, not a fixed count. |
+
+#### Quick Rule of Thumb
+- If your thought starts with *“Repeat this X times”*, it's often best to use a **`for`** loop.
+- If your thought starts with *“Keep doing this until…”*, it's often best to use a **`while`** loop.
+
 <br>
 
 # Summary
