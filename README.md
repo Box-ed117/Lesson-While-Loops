@@ -65,6 +65,11 @@ for (int counter = 0; counter <= 10; counter++) {
 }
 ```
 
+Both the `for` and `while` loop versions can be represented with the same flowchart:
+
+![flowchart](.media/01.png)
+
+
 ### Infinite Loops (Very Common Mistake)
 
 If the loop condition never becomes false, the loop runs **forever**.
