@@ -16,11 +16,21 @@ public class Main extends ConsoleProgram {
         // }
 
         //---------------| #2 Count Down |---------------
-        int numbers = 10; // Starting number
-        while (numbers >= 1) {
-            System.out.println(numbers); // Repeats untill
-            numbers -= 1; // Decreases by...
+        // int numbers = 10; // Starting number
+        // while (numbers >= 1) {
+        //     System.out.println(numbers); // Repeats untill
+        //     numbers -= 1; // Decreases by...
+        // }
+        // System.out.println("Blastoff!"); // End message
+
+        //---------------| #3 Repeat a Phrase |---------------
+        String phrase = readLine ("Repeated phrase: "); // Asks user for phrase
+        int repeat = readInt ("Repeat how many times? "); // Asks user for number of times repeated
+        System.out.println(); // Creates a space for clairity
+
+        while (repeat >= 1) {
+            System.out.println(phrase);
+            repeat -= 1;
         }
-        System.out.println("Blastoff!"); // End message
     }
 }
