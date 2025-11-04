@@ -24,13 +24,29 @@ public class Main extends ConsoleProgram {
         // System.out.println("Blastoff!"); // End message
 
         //---------------| #3 Repeat a Phrase |---------------
-        String phrase = readLine ("Repeated phrase: "); // Asks user for phrase
-        int repeat = readInt ("Repeat how many times? "); // Asks user for number of times repeated
-        System.out.println(); // Creates a space for clairity
+        // String phrase = readLine ("Repeated phrase: "); // Asks user for phrase
+        // int repeat = readInt ("Repeat how many times? "); // Asks user for number of times repeated
+        // System.out.println(); // Creates a space for clairity
 
-        while (repeat >= 1) {
-            System.out.println(phrase);
-            repeat -= 1;
+        // while (repeat >= 1) {
+        //     System.out.println(phrase);
+        //     repeat -= 1;
+        // }
+
+        //---------------| #4 Input Validation |---------------
+        int number;
+        boolean validNum = false;
+
+        while (validNum == false) {
+            number = readInt ("Enter a number (1-5): ");
+
+            if (number <= 5 && number >= 1) {
+                System.out.println("//Number accepted//");
+                System.out.println();
+                validNum = true;
+            } else {
+                System.out.println("//Number rejected//");
+            }
         }
     }
 }
