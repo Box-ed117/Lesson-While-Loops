@@ -86,21 +86,37 @@ public class Main extends ConsoleProgram {
         //---------------| #8 Multiplication Quiz |---------------
         // int num1 = (int)random(1, 20);
         // int num2 = (int)random(1, 20);
-
         //erm, ze random function ain't workin' D:
 
-        int num1 = 2; // let's assume that these are random
-        int num2 = 3;
-        int product = num1 * num2;
-        int guess = 0;
 
-        while (guess != product) {
-            guess = readInt ("What is " + num1 + " x " + num2 + "? ");
-            if (guess == product) {
-                System.out.println("Correct.");
+        // int num1 = 2; // let's assume that these are random
+        // int num2 = 3;
+        // int product = num1 * num2;
+        // int guess = 0;
+
+        // while (guess != product) {
+        //     guess = readInt ("What is " + num1 + " x " + num2 + "? ");
+        //     if (guess == product) {
+        //         System.out.println("Correct.");
+        //     } else {
+        //         System.out.println("Incorrect, try again.");
+        //     }
+        // }
+
+        //---------------| #9 Collatz Sequence Step Counter (Challenging) |---------------
+        int numInput;
+        int steps = 0;
+
+        numInput = readInt ("Enter a number: ");
+        while (numInput != 1) {
+            if (numInput % 2 == 0) {
+                numInput = numInput / 2;
             } else {
-                System.out.println("Incorrect, try again.");
+                numInput = numInput * 3;
+                numInput += 1;
             }
+            steps += 1;
         }
+        System.out.println("It took " + steps + " steps to reach 1.");
     }
 }
