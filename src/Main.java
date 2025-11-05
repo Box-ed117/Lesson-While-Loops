@@ -10,7 +10,7 @@ public class Main extends ConsoleProgram {
 
         //---------------| #1 Count up |---------------
         // int numbers = 1; // Starting Number
-        // while (numbers <= 10) { // Repeats untill...
+        // while (numbers <= 10) { // Repeats until...
         //    System.out.println(numbers);
         //    numbers += 1; // Increases by...
         // }
@@ -18,7 +18,7 @@ public class Main extends ConsoleProgram {
         //---------------| #2 Count Down |---------------
         // int numbers = 10; // Starting number
         // while (numbers >= 1) {
-        //     System.out.println(numbers); // Repeats untill
+        //     System.out.println(numbers); // Repeats until
         //     numbers -= 1; // Decreases by...
         // }
         // System.out.println("Blastoff!"); // End message
@@ -50,16 +50,28 @@ public class Main extends ConsoleProgram {
         // }
 
         //---------------| #5 Password Unlock |---------------
-        boolean passwordCorrect = false;
-        String passwordAttempt;
-        while (passwordCorrect == false) {
-            passwordAttempt = readLine ("Enter Password: ");
-            if (passwordAttempt.equals("open")) { // Correct password
-                System.out.println("Unlocked!");
-                passwordCorrect = true;
-            } else {
-                System.out.println("Incorrect.");
-            }
-        }
+        // boolean passwordCorrect = false;
+        // String passwordAttempt;
+        // while (passwordCorrect == false) {
+        //     passwordAttempt = readLine ("Enter Password: ");
+        //     if (passwordAttempt.equals("open")) { // Correct password
+        //         System.out.println("Unlocked!");
+        //         passwordCorrect = true;
+        //     } else {
+        //         System.out.println("Incorrect.");
+        //     }
+        // }
+
+        //---------------| #6 Sum Until Zero |---------------
+        // int addedNumber = 1;
+        // int totalNumber = 0;
+        // System.out.println("Enter 0 for total value");
+        // System.out.println("------------------------");
+        // while (addedNumber != 0) {
+        //     addedNumber = readInt ("Enter a number: ");
+        //     totalNumber = totalNumber + addedNumber;
+        // }
+        // System.out.println("Total = " + totalNumber);
+
     }
 }
