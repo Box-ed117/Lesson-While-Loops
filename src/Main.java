@@ -73,5 +73,14 @@ public class Main extends ConsoleProgram {
         // }
         // System.out.println("Total = " + totalNumber);
 
+        //---------------| #7 Count the Digits |---------------
+        int number;
+        int digits = 0;
+        number = readInt ("Enter a number: ");
+        while (number > 0) {
+            number = number / 10;
+            digits = digits + 1;
+        }
+        System.out.println("Digits: " + digits);
     }
 }
