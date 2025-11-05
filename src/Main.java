@@ -34,18 +34,31 @@ public class Main extends ConsoleProgram {
         // }
 
         //---------------| #4 Input Validation |---------------
-        int number;
-        boolean validNum = false;
+        // int number;
+        // boolean validNum = false;
 
-        while (validNum == false) {
-            number = readInt ("Enter a number (1-5): ");
+        // while (validNum == false) {
+        //     number = readInt ("Enter a number (1-5): ");
 
-            if (number <= 5 && number >= 1) {
-                System.out.println("//Number accepted//");
-                System.out.println();
-                validNum = true;
+        //     if (number <= 5 && number >= 1) {
+        //         System.out.println("//Number accepted//");
+        //         System.out.println();
+        //         validNum = true;
+        //     } else {
+        //         System.out.println("//Number rejected//");
+        //     }
+        // }
+
+        //---------------| #5 Password Unlock |---------------
+        boolean passwordCorrect = false;
+        String passwordAttempt;
+        while (passwordCorrect == false) {
+            passwordAttempt = readLine ("Enter Password: ");
+            if (passwordAttempt.equals("open")) { // Correct password
+                System.out.println("Unlocked!");
+                passwordCorrect = true;
             } else {
-                System.out.println("//Number rejected//");
+                System.out.println("Incorrect.");
             }
         }
     }
