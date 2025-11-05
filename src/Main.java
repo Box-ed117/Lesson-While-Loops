@@ -74,13 +74,33 @@ public class Main extends ConsoleProgram {
         // System.out.println("Total = " + totalNumber);
 
         //---------------| #7 Count the Digits |---------------
-        int number;
-        int digits = 0;
-        number = readInt ("Enter a number: ");
-        while (number > 0) {
-            number = number / 10;
-            digits = digits + 1;
+        // int number;
+        // int digits = 0;
+        // number = readInt ("Enter a number: ");
+        // while (number > 0) {
+        //     number = number / 10;
+        //     digits = digits + 1;
+        // }
+        // System.out.println("Digits: " + digits);
+
+        //---------------| #8 Multiplication Quiz |---------------
+        // int num1 = (int)random(1, 20);
+        // int num2 = (int)random(1, 20);
+
+        //erm, ze random function ain't workin' D:
+
+        int num1 = 2; // let's assume that these are random
+        int num2 = 3;
+        int product = num1 * num2;
+        int guess = 0;
+
+        while (guess != product) {
+            guess = readInt ("What is " + num1 + " x " + num2 + "? ");
+            if (guess == product) {
+                System.out.println("Correct.");
+            } else {
+                System.out.println("Incorrect, try again.");
+            }
         }
-        System.out.println("Digits: " + digits);
     }
 }
